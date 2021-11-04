@@ -8,10 +8,9 @@ import java.util.List;
 
 @Entity(name = "user")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class User {
+public class User  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long user_id;
     private String user_name;
     private String user_password;
