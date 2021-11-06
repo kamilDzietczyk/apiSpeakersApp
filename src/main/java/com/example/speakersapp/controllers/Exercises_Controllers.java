@@ -34,7 +34,7 @@ public class Exercises_Controllers {
     }
 
     @DeleteMapping
-    @RequestMapping(value = "deleteExercise/{id}", method = RequestMethod.DELETE)
+        @RequestMapping(value = "deleteExercise/{id}", method = RequestMethod.DELETE)
     public void deleteExercise(@PathVariable Long id){
         exercisesRepository.deleteById(id);
     }
