@@ -34,9 +34,14 @@ public class User_Exercise_Controllers {
     }
 
     @DeleteMapping
-    @RequestMapping(value = "delete/{id}", method = RequestMethod.DELETE)
-    public void deleteUser(@PathVariable Long id){
-        user_exercise_repo.deleteById(id);
+    @RequestMapping(value = "delete/userId/{id1}/exerciseId/{id2}", method = RequestMethod.DELETE)
+    public void deleteUser(@PathVariable(value = "id1") Long id1,@PathVariable(value = "id2") Long id2){
+        List<user_exercise> listOfExercise = user_exercise_repo.findAll();
+        for(int i=0;i<=listOfExercise.size()-1;i++){
+            if(listOfExercise.get(i).getUser_id()==id1 && listOfExercise.get(i).getExercises_id()==id2){
+                user_exercise_repo.deleteById(listOfExercise.get(i).getId_exe());
+            }
+        }
     }
 
     @PutMapping
