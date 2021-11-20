@@ -22,6 +22,15 @@ public class Records {
     private int record_exercise_id;
     private int record_score;
     private int record_attempts;
+    private String record_char;
+
+    public String getRecord_char() {
+        return record_char;
+    }
+
+    public void setRecord_char(String record_char) {
+        this.record_char = record_char;
+    }
 
     public Long getRecord_id() {
         return record_id;

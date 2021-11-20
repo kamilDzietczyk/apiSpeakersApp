@@ -3,8 +3,6 @@ package com.example.speakersapp.controllers;
 
 import com.example.speakersapp.model.User;
 import com.example.speakersapp.repo.UserRepository;
-import com.fasterxml.jackson.databind.util.JSONPObject;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,7 +61,7 @@ public class User_Controllers {
         }else{
             jsonObject.put("User: ","exist");
         }
-        userRepository.saveAndFlush(user);
+        //userRepository.saveAndFlush(user);
         return jsonObject;
     }
 
